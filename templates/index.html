@@ -1,0 +1,16 @@
+<!doctype html>
+<title>Restoran</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+<body>
+  <div id="navbar">
+  <ul><li><a href="Contact">Contact</a></li><li id="checkout-li"><a href="checkout">Checkout</a></li></ul>
+  </div>
+  <div>
+	{% for meal in meals %}
+	
+	{% endfor %}
+  </div>
+  <div class="footer"><a href="admin">Admin Panel</a></div>
+</body>
+</html>

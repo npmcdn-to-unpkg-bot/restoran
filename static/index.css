@@ -1,0 +1,9 @@
+body          { padding: 0; margin: 0; background-color: #FFF6E5; font-family: 'Open Sans', sans-serif;
+			    color: #3E454C; text-transform: lowercase; }
+.footer        { text-align: center; width: 100%; }
+ul            { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
+li            { float: left; }
+li a          { display: block; padding: 5%; color: #FFFFFF; text-decoration: none;
+				font-weight: bold; font-size: 2.5em; }
+#checkout-li  { float: right; background-color: #FF7F66; }
+#navbar       { padding: 0; margin: 0; background-color: #3E454C; }
