@@ -1,16 +1,60 @@
 <!doctype html>
-<title>Restoran</title>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
-<body>
-  <div id="navbar">
-  <ul><li><a href="Contact">Contact</a></li><li id="checkout-li"><a href="checkout">Checkout</a></li></ul>
-  </div>
-  <div>
-	{% for meal in meals %}
-	
-	{% endfor %}
-  </div>
-  <div class="footer"><a href="admin">Admin Panel</a></div>
-</body>
+<html>
+    <head>    
+        <title>Restoran</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!--        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">-->
+        <link rel="stylesheet" type="text/css" href="../static/index.css"> <!--DEBUG LINE FOR NO FLASK SHENANIGANS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    </head>    
+    <body>
+        <div id="navbar">
+            <ul>
+                <li>
+                    <a id="contact-link" href="Contact">
+                        Contact
+                    </a>
+                </li>
+                <li id="checkout-li">
+                    <a href="checkout">
+                        Checkout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="grid">
+            <!--            {% for meal in meals %}-->
+            <div class="wrapper">
+
+                <div class="card radius shadowDepth1">
+                    <div class="card__image border-tlr-radius">
+                        <img src="http://i.imgur.com/RIvdrsI.jpg" alt="image" class="border-tlr-radius">
+                    </div>
+                    <div class="circle">
+                        <a id="share" class="shop icon" href="#"></a>
+                    </div>
+
+                    <article class="article">
+                        <h2><a href="#">Orange Chicken</a></h2>
+                        <!--                            <p></p>-->
+                    </article>
+                </div>
+            </div>
+            <!--            {% endfor %}-->
+        </div>
+
+<!--        <div class="footer"><a href="admin">Admin Panel</a></div>-->
+
+        <script type="text/javascript">
+
+            $('.grid').masonry({
+                // options
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                percentPosition: true
+            });
+
+        </script>
+    </body>
 </html>

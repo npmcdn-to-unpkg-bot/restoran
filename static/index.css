@@ -1,9 +1,204 @@
-body          { padding: 0; margin: 0; background-color: #FFF6E5; font-family: 'Open Sans', sans-serif;
-			    color: #3E454C; text-transform: lowercase; }
-.footer        { text-align: center; width: 100%; }
-ul            { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
-li            { float: left; }
-li a          { display: block; padding: 5%; color: #FFFFFF; text-decoration: none;
-				font-weight: bold; font-size: 2.5em; }
-#checkout-li  { float: right; background-color: #FF7F66; }
-#navbar       { padding: 0; margin: 0; background-color: #3E454C; }
+body { 
+    padding: 0;
+    margin: 0; 
+    background-color: #FFF6E5; 
+    font-family: 'Open Sans', sans-serif;
+    color: #3E454C; 
+    text-transform: lowercase; 
+    font-size: 1em;
+}
+
+.footer {
+    text-align: center;
+    width: 100%; 
+    bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    padding: 5%; 
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#checkout-li {
+    float: right;
+    background-color: #FF7F66;
+    height:3em;
+    text-align: center;
+
+}
+
+#navbar{
+    padding: 0;
+    margin: 0   ;
+    background-color: #3E454C;
+    height:3em;
+}
+
+/*************************************************************************/
+
+@import 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import 'http://fonts.googleapis.com/css?family=Roboto:700,400';
+/*
+*  Basic Reset
+*/
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+* Basics Styles
+*/
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+a:hover {
+    color: #2980b9;
+}
+
+h2 {
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+}
+
+.wrapper {
+    max-width: 300px;
+/*    margin: 50px auto;*/
+/*    margin-bottom: 2em;*/
+    margin-top:  2em;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 1em;
+    padding-right: 1em;
+    float:left;
+}
+
+/**
+* Helpers
+*/
+.border-tlr-radius { 
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; 
+}
+
+
+.radius { border-radius: 2px; }
+
+.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+
+.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+
+.shadowDepth1 {
+    box-shadow: 
+        0 1px 3px rgba(0,0,0, 0.12),
+        0 1px 2px rgba(0,0,0, 0.24);      
+}
+
+
+/**
+* Card Styles
+*/
+
+.card {
+    background-color: #fff;
+    margin-bottom: 1.6rem;
+}
+
+.card__padding {
+    padding: 1.6rem;
+}
+
+.card__image {
+    min-height: 100px;
+    background-color: #eee;
+}
+.card__image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.card__content {
+    position: relative;
+}
+
+/* card article */
+.article a {
+    text-decoration: none;
+    color: #444;
+    transition: all 0.5s ease;
+}
+.article a:hover {
+    color: #2980b9;
+}
+
+.shop {
+    z-index: 2;
+}
+.shop:before {
+    content: "\f07a";
+    font-family: 'FontAwesome';
+    color: #3498db;
+}
+
+
+.icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    outline: 0;
+
+    box-shadow: 
+        0 2px 4px rgba(0,0,0, 0.12),
+        0 2px 4px rgba(0,0,0, 0.24);
+}
+.icon:hover,
+.icon:focus {
+    box-shadow: 
+        0 3px 6px rgba(0,0,0, 0.12),
+        0 3px 6px rgba(0,0,0, 0.24);
+
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+.circle {
+    float: right;
+	position: relative;
+	margin-top: -20px;
+    margin-right: 10px;
+}
+
+.article {
+    padding:1em;
+}
