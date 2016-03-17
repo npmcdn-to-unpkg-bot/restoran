@@ -59,6 +59,20 @@ def index():
     meals = cur.fetchall()
     return render_template('index.html', meals=meals)
 
+@app.route('/remove_meal', methods=['POST'])
+def remove_meal():
+    if not session.get('logged_in'):
+        abort(401)
+    english_name = request.form['english-name']
+    db = get_db()
+    print(english_name)
+    command = "delete from meals where english_name=?"
+    command_args = (english_name,)
+    db.execute(command, command_args)
+    db.commit()
+    flash('Meal successfully removed.')
+    return redirect(url_for('admin'))
+
 @app.route('/add_meal', methods=['POST'])
 def add_meal():
     if not session.get('logged_in'):
@@ -95,6 +109,8 @@ def add_meal():
         if image_url:
             command += ", image_url=?"
             command_args.append(image_url)
+        command += " where [english_name]=?;"
+        command_args.append(english_name)
     db.execute(command, command_args)
     db.commit()
     flash('Meal successfully added or updated.')

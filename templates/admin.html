@@ -15,7 +15,14 @@
       <li><h2>{{ meal.english_name }}</h2>
 		Chinese Name: {{ meal.chinese_name }}<br>
 		Price: ${{ meal.price|safe }}<br>
-		<img src="{{ meal.image_url }}"/>
+		<img src="{{ meal.image_url }}" width="320" height="225"/>
+		<br>		
+    <form action="{{ url_for('remove_meal') }}" method="post" class="add-meal">
+      <ul>
+		<input type="hidden" size="30" name="english-name" value="{{ meal.english_name }}">
+        <li class="label"><button type="submit" name="Remove Button" value="remove">Remove Meal</button>
+      </ul>
+    </form>
     {% else %}
       <li><em>You have not added any meals yet.</em>
     {% endfor %}
