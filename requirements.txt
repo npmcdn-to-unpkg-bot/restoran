@@ -1,1 +1,2 @@
 https://github.com/mitsuhiko/flask/tarball/master
+gunicorn==19.4.5
