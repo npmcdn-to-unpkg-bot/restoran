@@ -9,6 +9,7 @@ body {
 
 .grid {
 	align: center;
+	margin: 0 auto;
 }
 
 .footer {
@@ -90,7 +91,6 @@ h2 {
 }
 
 .wrapper {
-	padding: 1em;
     width: 375px;
     max-height: 225px;
 /*    margin: 50px auto;*/
