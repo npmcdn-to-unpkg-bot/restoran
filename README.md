@@ -7,7 +7,7 @@ To create or reset the database, `flask --app=application initdb`
 
 **YOU MUST CREATE THE DATABASE**
 
-To run, `python3 restoran.py`
+To run, `python3 application.py`
 
 The server runs on `localhost:5000`
 
